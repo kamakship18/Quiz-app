@@ -1,5 +1,5 @@
 import React from 'react';
-import './ResultComponent.css'; 
+import './ResultComponent.css';
 
 function ResultComponent({ answers, onRestartQuiz }) {
   const correctAnswers = answers.filter((answer) => answer.isCorrect).length;

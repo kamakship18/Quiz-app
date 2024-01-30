@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 import ResultComponent from './ResultComponent';
-import "./QuizBox.css"
+import Header from './header/header';
+import './QuizBox.css';
 
 function QuizBox({ questions }) {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [answers, setAnswers] = useState([]);
   const [highlighted, setHighlighted] = useState(false);
+  const [theme, setTheme] = useState('light');
+
 
   const handleAnswerClick = (isCorrect) => {
     setAnswers([...answers, { question: currentQuestion, isCorrect }]);
@@ -22,10 +25,21 @@ function QuizBox({ questions }) {
     setAnswers([]);
   };
 
+  const toggleTheme = () => {
+  setTheme((prevTheme) => {
+    const newTheme = prevTheme === 'light' ? 'dark' : 'light';
+    document.body.classList.toggle('dark-theme', newTheme === 'dark');
+    return newTheme;
+  });
+};
+
+
   const question = questions[currentQuestion];
 
   return (
-    <div className="quiz-box">
+    <div className={`quiz-box ${theme}-theme`}>
+      <Header theme={theme} toggleTheme={toggleTheme} />
+
       {currentQuestion < questions.length ? (
         <div className="question-container">
           <h1 className="question-number">

@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "./HomeComponent.css";
+import Header from './header/header';
+
 
 const FrontPage = () => {
   const [theme, setTheme] = useState("light");
@@ -11,20 +13,7 @@ const FrontPage = () => {
   return (
     <div className="complete">
     <div className={`front-page ${theme}-theme`}>
-      
-      <header className="header">
-
-        <div className ="logo">
-        <img src="./src/assets/Brain.png" alt="Website Icon" />
-        <span>Think Tank</span>
-        </div>
-
-        <button className="theme-button" onClick={toggleTheme}>
-          {theme === "light" ? "Dark" : "Light"} Mode
-        </button>
-
-      </header>
-
+    <Header theme={theme} toggleTheme={toggleTheme} />
       <main className="main-content">
         <div className="text-and-gif-container">
           <p className="greeting-text">

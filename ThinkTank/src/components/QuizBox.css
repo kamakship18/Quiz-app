@@ -4,10 +4,15 @@ body, html {
     padding: 0;
     overflow: hidden;
   }
+
+  body {
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
   
 /* Style for the entire quiz box */
   .question-container {
-    max-width: 600px;
+        max-width: 600px;
         margin: 0 auto; 
         padding: 20px;
         background-color: #f9f9f9;
@@ -21,7 +26,6 @@ body, html {
   .question-text {
     font-size: 18px;
     font-weight: bold;
-    color: #333;
   }
   
   
@@ -67,7 +71,21 @@ body, html {
     background-color: #c0392b;
     box-shadow: 0 0 10px rgba(231, 76, 60, 0.8);
   }
-  
+
+  .dark-theme {
+    background-color: black;
+  }
+
+  .dark-theme .question-container{
+    background-color: #333;
+  }
+  .dark-theme .question-number{
+    color: white;
+  }
+  .dark-theme .question-text{
+    color: white;
+  }
+
   /* Responsive styles for phones */
   @media (max-width: 600px) {
     .quiz-box {
@@ -78,4 +96,5 @@ body, html {
       grid-template-columns: 1fr; 
     }
   }
+  
   
