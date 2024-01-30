@@ -1,0 +1,12 @@
+body{
+    height: 100vh;
+    width: 100%
+  }
+  
+  #root{
+    height: 100%;
+    width: 100%;
+  }
+  .complete{
+    height: 100%;
+  }

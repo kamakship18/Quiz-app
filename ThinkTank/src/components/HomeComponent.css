@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,600&display=swap');
+
+/* Base styles */
+body {
+  font-family: Roboto, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff; /* Light theme background */
+  transition: background-color 0.3s ease-in-out;
+}
+
+.dark-theme body {
+  background-color: #222; /* Dark theme background */
+}
+
+/* Overall layout */
+.complete {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+/* Header */
+.header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+
+.logo span {
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: none;
+  color: #F45B69; /* Primary accent color */
+}
+
+.dark-theme .logo span {
+  color: #EE6E77; /* Lighter primary accent for dark theme */
+}
+
+.theme-button {
+  background-color: #F45B69; /* Theme button color */
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.theme-button:hover {
+  background-color: darken(#F45B69, 10%);
+}
+
+.dark-theme .theme-button {
+  background-color: #EE6E77; /* Lighter theme button for dark theme */
+}
+
+/* Main content */
+.main-content {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.greeting-text {
+  font-size: 1.2rem;
+  font-weight: bold;
+  line-height: 1.5;
+  color: #444;
+}
+
+.dark-theme .greeting-text {
+  color: #fff;
+}
+
+.animated-gif {
+  width: 300px;
+  margin-top: 1rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Subtle drop shadow */
+}
+
+.start-quiz-button {
+  background-color: #F8C0A3; /* Secondary accent color */
+  color: #fff;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 1rem;
+  transition: background-color 0.2s ease-in-out 
+}
+
+.start-quiz-button:hover {
+  background-color: darken(#F8C0A3, 10%);
+}
+
+/* Footer */
+.footer {
+  font-size: 0.9rem;
+  color: #666;
+  margin-top: 2rem;
+}
+.main-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+}
+  /* Adjust styles as needed */
+.front-page dark-theme{
+  height: 99vh;
+}
+
+#root{
+  height: 99vh;
+}
+
+:root {
+  --light-background-color: #ffffff;
+  --dark-background-color: #1a1a1a;
+  --light-text-color: #000000;
+  --dark-text-color: #ffffff;
+}
+
+.front-page {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.light-theme {
+  --background-color: var(--light-background-color);
+  --text-color: var(--light-text-color);
+}
+
+.dark-theme {
+  --background-color: var(--dark-background-color);
+  --text-color: var(--dark-text-color);
+}
