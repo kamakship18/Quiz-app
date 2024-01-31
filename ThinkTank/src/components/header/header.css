@@ -20,27 +20,14 @@
     font-size: 2rem;
     font-weight: bold;
     text-decoration: none;
-    color: #F45B69; /* Primary accent color */
+    color: #F45B69; 
   }
-  
-  .dark-theme .logo span {
-    color: #EE6E77; /* Lighter primary accent for dark theme */
-  }
-  
+
   .theme-button {
-    background-color: #F45B69; /* Theme button color */
+    background-color: #F45B69; 
     color: #fff;
     padding: 0.5rem 1rem;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.2s ease-in-out;
-  }
-  
-  .theme-button:hover {
-    background-color: darken(#F45B69, 10%);
-  }
-  
-  .dark-theme .theme-button {
-    background-color: #EE6E77; /* Lighter theme button for dark theme */
   }

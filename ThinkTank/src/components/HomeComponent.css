@@ -1,15 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,600&display=swap');
 
-/* Base styles */
 body {
   font-family: Roboto, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #fff; 
-  transition: background-color 0.3s ease-in-out;
+  background-color: #facccc; 
 }
 
-/* Overall layout */
 .complete {
   display: flex;
   flex-direction: column;
@@ -21,15 +18,26 @@ body {
 
 /* Main content */
 .main-content {
-  text-align: center;
-  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text-and-gif-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 .greeting-text {
+  font-family: poppins;
+  padding: 20px;
   font-size: 1.2rem;
   font-weight: bold;
   line-height: 1.5;
-  color: #444;
+  color: #4b1717;
 }
 
 .dark-theme .greeting-text {
@@ -37,13 +45,11 @@ body {
 }
 
 .animated-gif {
-  width: 300px;
-  margin-top: 1rem;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Subtle drop shadow */
+  max-width: 100%;
 }
 
 .start-quiz-button {
-  background-color: #F8C0A3; /* Secondary accent color */
+  background-color: #F8C0A3; 
   color: #fff;
   padding: 1rem 2rem;
   border: none;
@@ -52,33 +58,49 @@ body {
   font-weight: bold;
   cursor: pointer;
   margin-top: 1rem;
-  transition: background-color 0.2s ease-in-out 
 }
 
-.start-quiz-button:hover {
-  background-color: darken(#F8C0A3, 10%);
+@media screen and (max-width: 600px) {
+  .text-and-gif-container {
+    padding: 0 10px; 
+  }
+
+  .greeting-text {
+    max-width: 100%; 
+  }
+
+  .animated-gif {
+    max-width: 100%;
+  }
 }
 
 /* Footer */
 .footer {
-  font-size: 0.9rem;
-  color: #666;
-  margin-top: 2rem;
-}
-.main-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between; 
-}
-  /* Adjust styles as needed */
-.front-page dark-theme{
-  height: 99vh;
+  background-color: #f8f8f8; 
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  margin-top: 30px; 
 }
 
-#root{
-  height: 99vh;
+.footer-text {
+  font-weight: bold;
+  color: #f04949;
+  margin-bottom: 5px;
 }
 
+.footer hr {
+  border: 0;
+  height: 1px;
+  margin: 10px auto;
+  width: 80%; 
+}
+
+.dark-theme .footer-text{
+  color: #000000;
+}
+
+/* dark mode */
 :root {
   --light-background-color: #ffffff;
   --dark-background-color: #1a1a1a;

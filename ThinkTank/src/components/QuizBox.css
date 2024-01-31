@@ -1,11 +1,9 @@
-/* QuizBox.css */
 body, html {
     margin: 0;
     padding: 0;
     overflow: hidden;
   }
   
-/* Style for the entire quiz box */
   .question-container {
         max-width: 600px;
         margin: 0 auto; 
@@ -17,14 +15,11 @@ body, html {
         margin-top: 185px;
   }
   
-  /* Style for the question text */
   .question-text {
     font-size: 18px;
     font-weight: bold;
   }
   
-  
-  /* Style for the answer options */
   .answer-options {
     display: grid;
     grid-template-columns: repeat(2, 1fr); 
@@ -32,7 +27,6 @@ body, html {
     justify-content: center; 
   }
   
-  /* Style for each answer button */
   .answer-button {
     width: 100%;
     padding: 10px;
@@ -48,7 +42,6 @@ body, html {
     background-color: #2980b9;
   }
   
-  /* Style for the highlight button */
   .highlight-button {
     display: block;
     margin: 0 auto;
@@ -81,7 +74,6 @@ body, html {
     color: white;
   }
 
-  /* Responsive styles for phones */
   @media (max-width: 600px) {
     .quiz-box {
       max-width: 90%;

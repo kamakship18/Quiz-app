@@ -3,9 +3,14 @@ import './ResultComponent.css';
 
 function ResultComponent({ answers, onRestartQuiz }) {
   const totalQuestions = 5;
+
+  // total the number of correct answers
   const correctAnswers = answers.filter((answer) => answer.isCorrect).length;
+
+  // total the percentage of correct answers
   const percentageCorrect = (correctAnswers / totalQuestions) * 100;
 
+  // different gifs comes up on the bases of differnt scores
   const getGIF = () => {
     if (correctAnswers < 3) {
       return 'https://i.giphy.com/QZxMkYOzRodf8dBNKp.webp';
@@ -16,6 +21,7 @@ function ResultComponent({ answers, onRestartQuiz }) {
     }
   };
 
+  // rendering for the ResultComponent
   return (
     <div className="result-container">
       <h1 className="result-title">Quiz Result</h1>
@@ -23,8 +29,7 @@ function ResultComponent({ answers, onRestartQuiz }) {
       <p className="result-text">
         You got {correctAnswers} out of {totalQuestions} questions correct!
       </p>
-      <p className="result-text">Percentage Correct: {percentageCorrect.toFixed(2)}%</p>
-
+      <p className="result-text">Percentage Correct: {percentageCorrect}%</p>
       <button className="result-button" onClick={onRestartQuiz}>
         RESTART
       </button>

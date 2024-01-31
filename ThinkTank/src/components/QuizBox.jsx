@@ -1,30 +1,37 @@
 import React, { useState } from 'react';
-import ResultComponent from './ResultComponent';
-import Header from './header/header';
-import './QuizBox.css';
+import ResultComponent from './ResultComponent'; 
+import Header from './header/header'; 
+import './QuizBox.css'; 
 
 function QuizBox({ questions, theme, toggleTheme }) {
-  const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [answers, setAnswers] = useState([]);
-  const [highlighted, setHighlighted] = useState(false);
 
+  // use the useState hook to manage state variables
+  const [currentQuestion, setCurrentQuestion] = useState(0); // for the current question index
+  const [answers, setAnswers] = useState([]); // to store user's answers
+  const [highlighted, setHighlighted] = useState(false); // to track highlight status
+
+  // to handle user's answer click
   const handleAnswerClick = (isCorrect) => {
     setAnswers([...answers, { question: currentQuestion, isCorrect }]);
     setCurrentQuestion(currentQuestion + 1);
     setHighlighted(false);
   };
 
+  // to toggle the highlight status
   const handleHighlightToggle = () => {
     setHighlighted(!highlighted);
   };
 
+  // to restart the quiz
   const handleRestartQuiz = () => {
     setCurrentQuestion(0);
     setAnswers([]);
   };
 
+  // gets the current question based on the currentQuestion index
   const question = questions[currentQuestion];
 
+  // rendering for the QuizBox component
   return (
     <div className={`quiz-box ${theme}-theme`}>
       <Header theme={theme} toggleTheme={toggleTheme} />
@@ -52,6 +59,7 @@ function QuizBox({ questions, theme, toggleTheme }) {
           </button>
         </div>
       ) : (
+        // if all questions are answered, render the ResultComponent
         <ResultComponent answers={answers} onRestartQuiz={handleRestartQuiz} />
       )}
     </div>
