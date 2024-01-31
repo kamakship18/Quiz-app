@@ -5,12 +5,8 @@ body {
   font-family: Roboto, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #fff; /* Light theme background */
+  background-color: #fff; 
   transition: background-color 0.3s ease-in-out;
-}
-
-.dark-theme body {
-  background-color: #222; /* Dark theme background */
 }
 
 /* Overall layout */
@@ -22,8 +18,6 @@ body {
   justify-content: space-between;
   padding: 2rem;
 }
-
-/* Header */
 
 /* Main content */
 .main-content {

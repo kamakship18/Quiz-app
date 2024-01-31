@@ -1,6 +1,5 @@
-// Header.jsx
-import React from 'react';
-import "./header.css"
+import React from "react";
+import "./Header.css";
 
 const Header = ({ theme, toggleTheme }) => {
   return (
@@ -10,7 +9,7 @@ const Header = ({ theme, toggleTheme }) => {
         <span>Think Tank</span>
       </div>
       <button className="theme-button" onClick={toggleTheme}>
-        {theme === 'light' ? 'Dark' : 'Light'} Mode
+        {theme === "light" ? "Dark" : "Light"} Mode
       </button>
     </header>
   );

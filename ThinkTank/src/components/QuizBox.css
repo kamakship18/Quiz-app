@@ -4,11 +4,6 @@ body, html {
     padding: 0;
     overflow: hidden;
   }
-
-  body {
-    transition: background-color 0.3s, color 0.3s;
-  }
-  
   
 /* Style for the entire quiz box */
   .question-container {
