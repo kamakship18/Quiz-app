@@ -16,7 +16,7 @@ body {
   padding: 2rem;
 }
 
-/* Main content */
+/* main content */
 .main-content {
   display: flex;
   flex-direction: column;
@@ -74,7 +74,7 @@ body {
   }
 }
 
-/* Footer */
+/* footer */
 .footer {
   background-color: #f8f8f8; 
   padding: 20px;
